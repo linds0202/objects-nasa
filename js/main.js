@@ -7,10 +7,10 @@ function getPic() {
 
     console.log(date)
     let baseURL = 'https://api.nasa.gov/planetary/apod?api_key='
-    let apiKey = 'Vir3S6rBMTe7L7SVPRZ0bflTGx9QzQyhkTi5L9JK'
+    const api_key = config.NASA_API_KEY
     let appendDate = '&date=' + date
 
-    fetch(baseURL + apiKey + appendDate)
+    fetch(`${baseURL}${api_key}${appendDate}`)
     .then(res =>res.json ())
     .then(data => {
         console.log(data)
