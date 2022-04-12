@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Nasa</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header class="header" id="home">
+			<section class="img-wrapper">
+				<img src="space.jpg" alt="outer space">
+			</section>
+			<section class="banner">
+				<h1>NASA's Pic of the Day</h1>
+				<p>Nasa posts one unique picture every day. You can look back through time and find a picture by entering a specific date below.</p>
+				<button><a href="#try-it"> Try It Now </a></button>
+			</section>
+		</header>
+		<section class="container" id="try-it">
+			<section class="box one">
+				<h2>Which date?</h2>
+				<input type="date" name="" value="">
+				<button type="button" name="button" id="get-pic">Get Picture</button>
+				<h2>Name: <span id="name"></span></h2>
+				<h3>Description: </h3>
+				<p id="explanation"></p>
+			</section>
+			<section class="box two">
+				<img id="pic-of-day" >
+			</section>
+			
+		</section>
+		
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
