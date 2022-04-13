@@ -15,7 +15,15 @@ function getPic() {
     .then(data => {
         console.log(data)
         console.log(data.date)
-        document.getElementById('pic-of-day').src = data.hdurl
+        if (data.media_type === 'image') {
+            document.getElementById('pic-of-day').src = data.hdurl
+            document.getElementById('pic-of-day').classList.remove('hidden')
+            document.getElementById('vid-of-day').classList.add('hidden')
+          } else {
+            document.getElementById('vid-of-day').src = data.url
+            document.getElementById('vid-of-day').classList.remove('hidden')
+            document.getElementById('pic-of-day').classList.add('hidden')
+          }
         document.getElementById('name').innerText = data.title
         document.getElementById('explanation').innerText = data.explanation
     })
